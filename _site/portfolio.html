@@ -32,6 +32,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body id="page-top">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -63,6 +64,9 @@
             <li>
               <a href="/portfolio.html">Portfolio</a>
             </li>
+            <li>
+              <a href="/blog.html">Blog</a>
+            </li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -78,6 +82,78 @@
 <section class="no-padding" id="portfolio">
   <div class="container-fluid">
     <div class="row no-gutter">
+      
+      <div class="col-lg-4 col-sm-6">
+        <a href="https://facebook.com" class="portfolio-box">
+          <img src="/img/portfolio/2.jpg" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">Branding</div>
+              <div class="project-name">Facebook</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6">
+        <a href="https://google.com" class="portfolio-box">
+          <img src="/img/portfolio/1.jpg" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">Web Design</div>
+              <div class="project-name">Google</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6">
+        <a href="https://instagram.com" class="portfolio-box">
+          <img src="/img/portfolio/5.jpg" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">Branding</div>
+              <div class="project-name">Instagram</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6">
+        <a href="https://pinterest.com" class="portfolio-box">
+          <img src="/img/portfolio/4.jpg" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">Branding, Web Design</div>
+              <div class="project-name"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6">
+        <a href="https://twitter.com" class="portfolio-box">
+          <img src="/img/portfolio/6.jpg" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">SEO</div>
+              <div class="project-name">Twitter</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6">
+        <a href="https://uber.com" class="portfolio-box">
+          <img src="/img/portfolio/3.jpg" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">Branding</div>
+              <div class="project-name">Uber</div>
+            </div>
+          </div>
+        </a>
+      </div>
       
     </div>
   </div>
@@ -114,6 +190,17 @@
         </div>
       </div>
     </section>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

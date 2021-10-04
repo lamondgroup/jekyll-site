@@ -32,6 +32,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body id="page-top">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -63,6 +64,9 @@
             <li>
               <a href="/portfolio.html">Portfolio</a>
             </li>
+            <li>
+              <a href="/blog.html">Blog</a>
+            </li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -72,7 +76,7 @@
     <header>
   <div class="header-content">
     <div class="header-content-inner">
-      <h1>Your Favorite source of Free Bootstrap Themes</h1>
+      <h1>Hello, World</h1>
       <hr />
       <p>
         Start Bootstrap can help you build better websites using the Bootstrap
@@ -126,6 +130,17 @@
         </div>
       </div>
     </section>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
